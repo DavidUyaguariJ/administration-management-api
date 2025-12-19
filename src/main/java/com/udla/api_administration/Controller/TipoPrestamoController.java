@@ -9,8 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tipos_prestamos")
-public class TipoPrestamoController {
+public class
+TipoPrestamoController {
     private final TipoPrestamoService service;
+
     public TipoPrestamoController(TipoPrestamoService service) {
         this.service = service;
     }

@@ -1,5 +1,8 @@
 package com.udla.api_administration.Dto.Entidad;
 
+import lombok.Data;
+
+@Data
 public class EntidadFinancieraDTO {
     private Integer id;
     private String nombre;

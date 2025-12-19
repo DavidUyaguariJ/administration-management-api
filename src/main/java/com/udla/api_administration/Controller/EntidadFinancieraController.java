@@ -26,6 +26,7 @@ public class EntidadFinancieraController {
     public EntidadFinancieraDTO crear(@RequestBody EntidadFinancieraCreateDTO dto) {
         return service.create(dto);
     }
+
     @PutMapping("/{id}")
     public EntidadFinancieraDTO actualizar(
             @PathVariable Integer id,
@@ -33,6 +34,7 @@ public class EntidadFinancieraController {
     ) {
         return service.update(id, dto);
     }
+
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Integer id) {
         service.delete(id);
