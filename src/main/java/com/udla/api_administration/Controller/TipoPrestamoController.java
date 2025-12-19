@@ -22,6 +22,11 @@ TipoPrestamoController {
         return service.getAll();
     }
 
+    @GetMapping("/{id}")
+    public TipoPrestamoDTO buscar(@PathVariable Integer id) {
+        return service.findById(id);
+    }
+
     @PostMapping
     public TipoPrestamoDTO crear(@RequestBody TipoPrestamoCreateDTO dto) {
         return service.create(dto);

@@ -20,6 +20,10 @@ public class TipoPrestamoService {
         this.mapper = mapper;
     }
 
+    public TipoPrestamoDTO findById(Integer id) {
+        return mapper.toDTO(repo.findById(id).orElseThrow());
+    }
+
     public List<TipoPrestamoDTO> getAll() {
         return repo.findAll().stream().map(mapper::toDTO).toList();
     }

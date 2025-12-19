@@ -25,6 +25,12 @@ public class EntidadFinancieraService {
         return repo.findAll().stream().map(mapper::toDTO).toList();
     }
 
+    public EntidadFinancieraDTO getById(Integer id) {
+        return mapper.toDTO(repo.findById(id).orElseThrow(
+                ()-> new RuntimeException("No existe entidad")
+        ));
+    }
+
     public EntidadFinancieraDTO create(EntidadFinancieraCreateDTO dto) {
         EntidadFinanciera entidad = mapper.toEntity(dto);
         repo.save(entidad);

@@ -22,6 +22,12 @@ public class EntidadFinancieraController {
         return service.getAll();
     }
 
+    @GetMapping("/{id}")
+    public EntidadFinancieraDTO buscarPorId(@PathVariable Integer id) {
+        return service.getById(id);
+    }
+
+
     @PostMapping
     public EntidadFinancieraDTO crear(@RequestBody EntidadFinancieraCreateDTO dto) {
         return service.create(dto);
