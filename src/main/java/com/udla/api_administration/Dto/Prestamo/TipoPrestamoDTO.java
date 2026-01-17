@@ -1,5 +1,8 @@
 package com.udla.api_administration.Dto.Prestamo;
 
+import lombok.Data;
+
+@Data
 public class TipoPrestamoDTO {
     private Integer id;
     private String nombre;
